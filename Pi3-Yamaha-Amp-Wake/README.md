@@ -17,7 +17,7 @@ This folder is an **Obsidian Vault**. Open it in Obsidian with `File → Open fo
 > The vault documents one complete build: a **Raspberry Pi 3 music receiver that wakes a Yamaha RX-V371 amplifier from standby** when a phone or laptop connects over Bluetooth or Wi-Fi. It also records every hardware option that was researched (including the ones that were rejected), the reasoning behind the final choice, and the full implementation plan.
 
 > [!note] Path
-> The vault lives at `/home/fred/readmes`. Filesystem root (`/readmes`) is not writable by the `fred` user, so the vault was placed in the home directory instead.
+> The vault lives at `/home/fred/readmes/Pi3-Yamaha-Amp-Wake`. Filesystem root (`/readmes`) is not writable by the `fred` user, so the vault was placed in the home directory, with the whole project inside its own dedicated folder.
 
 ---
 
@@ -39,45 +39,44 @@ This folder is an **Obsidian Vault**. Open it in Obsidian with `File → Open fo
 ## Vault structure
 
 ```text
-/home/fred/readmes/
-├── README.md                          ← you are here (vault index)
-├── .obsidian/                         ← Obsidian workspace settings
-├── Projects/
-│   └── Pi3-Yamaha-Amp-Wake/
-│       ├── Home.md                    ← main project README
-│       ├── 01-Overview-and-Goals.md
-│       ├── 02-Architecture.md
-│       ├── 03-Implementation-Plan.md
-│       ├── 04-Verification-Checklist.md
-│       ├── 05-Troubleshooting.md
-│       └── 06-Decision-Log.md
-├── Hardware/
-│   ├── Hardware-Options-Comparison.md
-│   ├── Wiring-Details.md
-│   └── IR/
-│       ├── Adafruit-GPIO-IR-SELECTED.md
-│       ├── Adafruit-IR-Transceiver-5990.md
-│       ├── BroadLink-RM4-Mini.md
-│       ├── GlobalCache-iTach-IP2IR.md
-│       ├── Irdroid-USB-IR-Transceiver.md
-│       ├── USB-UIRT.md
-│       ├── Hauppauge-MCE-USB.md
-│       ├── PCBWay-Pico-IR-Blaster-HAT.md
-│       ├── PCBWay-IR-Blaster-1-ESP8266.md
-│       └── Rejected-Options.md
-├── Software/
-│   ├── Pi-Base-Configuration.md
-│   ├── IR-Learning-and-Sending.md
-│   ├── Amp-Wake-Script.md
-│   ├── Bluetooth-BlueALSA.md
-│   ├── WiFi-Shairport-Sync.md
-│   └── Systemd-Services.md
-├── Reference/
-│   ├── Yamaha-RX-V371.md
-│   ├── Command-Cheatsheet.md
-│   └── Glossary.md
-└── Research/
-    └── Research-Log.md
+/home/fred/readmes/                       ← git repository root
+└── Pi3-Yamaha-Amp-Wake/                  ← the whole project / Obsidian vault
+    ├── README.md                         ← you are here (vault index)
+    ├── .obsidian/                        ← Obsidian workspace settings
+    ├── Home.md                           ← main project README
+    ├── 01-Overview-and-Goals.md
+    ├── 02-Architecture.md
+    ├── 03-Implementation-Plan.md
+    ├── 04-Verification-Checklist.md
+    ├── 05-Troubleshooting.md
+    ├── 06-Decision-Log.md
+    ├── Hardware/
+    │   ├── Hardware-Options-Comparison.md
+    │   ├── Wiring-Details.md
+    │   └── IR/
+    │       ├── Adafruit-GPIO-IR-SELECTED.md
+    │       ├── Adafruit-IR-Transceiver-5990.md
+    │       ├── BroadLink-RM4-Mini.md
+    │       ├── GlobalCache-iTach-IP2IR.md
+    │       ├── Irdroid-USB-IR-Transceiver.md
+    │       ├── USB-UIRT.md
+    │       ├── Hauppauge-MCE-USB.md
+    │       ├── PCBWay-Pico-IR-Blaster-HAT.md
+    │       ├── PCBWay-IR-Blaster-1-ESP8266.md
+    │       └── Rejected-Options.md
+    ├── Software/
+    │   ├── Pi-Base-Configuration.md
+    │   ├── IR-Learning-and-Sending.md
+    │   ├── Amp-Wake-Script.md
+    │   ├── Bluetooth-BlueALSA.md
+    │   ├── WiFi-Shairport-Sync.md
+    │   └── Systemd-Services.md
+    ├── Reference/
+    │   ├── Yamaha-RX-V371.md
+    │   ├── Command-Cheatsheet.md
+    │   └── Glossary.md
+    └── Research/
+        └── Research-Log.md
 ```
 
 ---
